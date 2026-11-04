@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MoodleIA - Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Encabezado -->
+        <header class="encabezado-dashboard">
+
+            <div>
+                <h1>MoodleIA</h1>
+                <p>Dashboard académico</p>
+            </div>
+
+            <button id="btnCerrarSesion">
+                Cerrar sesión
+            </button>
+
+        </header>
+
+
+        <main>
+
+            <section class="bienvenida-docente">
+
+                    <h2 id="nombreDocente">
+                        Bienvenido
+                    </h2>
+
+                    <p>
+                        Consulta la actividad académica
+                        y las estadísticas del asistente MoodleIA.
+                    </p>
+
+            </section>
+
+            <!-- CURSOS DEL DOCENTE -->
+            <section class="seccion">
+
+                        <h2>Mis cursos</h2>
+
+                        <p>
+                            Cursos asociados a tu usuario de Moodle.
+                        </p>
+
+                        <div id="misCursosDocente">
+                            Cargando cursos...
+                        </div>
+
+            </section>
+
+
+                    <!-- FILTRO DE ESTADÍSTICAS POR CURSO -->
+        <section class="seccion">
+
+            <h2>Filtrar estadísticas</h2>
+
+            <label for="selectorCurso">
+                Seleccionar curso:
+            </label>
+
+            <select id="selectorCurso">
+                <option value="">Todos mis cursos</option>
+            </select>
+
+        </section>
+
+            <h2>Resumen de actividad</h2>
+
+
+            <!-- KPIs -->
+            <section class="tarjetas">
+
+                <div class="tarjeta">
+                    <h3>Consultas realizadas</h3>
+                    <p id="totalConsultas">0</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Usuarios activos</h3>
+                    <p id="usuariosActivos">0</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Respuestas exitosas</h3>
+                    <p id="porcentajeExitosas">0%</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Respuestas correctas</h3>
+                    <p id="respuestasExitosas">0</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Sin contexto</h3>
+                    <p id="sinContexto">0</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Errores</h3>
+                    <p id="totalErrores">0</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Tiempo promedio</h3>
+                    <p class="tiempo">
+                        <span id="tiempoPromedio">0</span> s
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Consultas por curso -->
+            <section class="seccion">
+
+                <h2>Consultas por curso</h2>
+
+                <div id="listaCursos">
+                    Cargando información...
+                </div>
+
+            </section>
+
+
+            <!-- Gráfica de consultas por día -->
+            <section class="seccion">
+
+                <h2>Consultas por día</h2>
+
+                <div class="contenedor-grafica">
+                    <canvas id="graficaConsultas"></canvas>
+                </div>
+
+                <div id="listaDias">
+                    Cargando información...
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

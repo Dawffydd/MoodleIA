@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #252525;
+}
+
+.pagina-cursos {
+    min-height: 100vh;
+}
+
+.encabezado {
+    background: #1672c4;
+    color: white;
+
+    padding: 25px 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.encabezado p {
+    margin: 5px 0 0;
+}
+
+.encabezado button {
+    padding: 10px 18px;
+
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.encabezado button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.contenido {
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+.bienvenida {
+    margin-bottom: 30px;
+}
+
+.bienvenida h2 {
+    margin-bottom: 8px;
+}
+
+.bienvenida p {
+    color: #666;
+}
+
+#mensajeEstado {
+    margin: 20px 0;
+    color: #555;
+}
+
+.lista-cursos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 20px;
+}
+
+.tarjeta-curso {
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 180px;
+}
+
+.informacion-curso h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.informacion-curso p {
+    color: #666;
+}
+
+.tarjeta-curso button {
+    margin-top: 20px;
+
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #1672c4;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.tarjeta-curso button:hover {
+    background: #125fa3;
+}

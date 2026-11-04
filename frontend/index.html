@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MoodleIA - Asistente académico</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ============================== -->
+    <!-- LOGIN -->
+    <!-- ============================== -->
+
+    <div class="contenedor-login" id="contenedorLogin">
+
+        <div class="login">
+
+            <h1>MoodleIA</h1>
+
+            <p class="subtitulo-login">
+                Inicia sesión para utilizar el asistente académico
+            </p>
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="Correo electrónico"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+            >
+
+            <button id="btnLogin">
+                Iniciar sesión
+            </button>
+
+            <p id="mensajeLogin"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================== -->
+    <!-- CHAT -->
+    <!-- ============================== -->
+
+    <div
+        class="contenedor-chat"
+        id="contenedorChat"
+        style="display: none;"
+    >
+
+        <!-- Encabezado -->
+        <div class="encabezado">
+
+            <div>
+                <h1>MoodleIA</h1>
+                <p>Asistente académico del curso</p>
+            </div>
+
+            <button id="btnCerrarSesion">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+        
+        <!-- ============================== -->
+        <!-- HISTORIAL DE CONVERSACIONES -->
+        <!-- ============================== -->
+
+        <section class="seccion-historial">
+
+            <div class="encabezado-historial">
+                <h2>Conversaciones anteriores</h2>
+
+                <button type="button" id="btnNuevaConversacion">
+                    + Nueva conversación
+                </button>
+            </div>
+
+            <div id="listaConversaciones" class="lista-conversaciones">
+                <p>Cargando conversaciones...</p>
+            </div>
+
+        </section>
+
+
+        
+<!-- ================================== -->
+<!-- CUESTIONARIOS CON IA -->
+<!-- ================================== -->
+
+<section class="seccion-cuestionario">
+
+    <div class="encabezado-cuestionario">
+        <h2>Cuestionarios de práctica</h2>
+
+        <button
+            type="button"
+            id="btnGenerarCuestionario"
+        >
+            Generar cuestionario con IA
+        </button>
+    </div>
+
+    <p id="estadoCuestionario"></p>
+
+    <div
+        id="contenedorCuestionario"
+        style="display: none;"
+    >
+        <div id="preguntasCuestionario"></div>
+
+        <button
+            type="button"
+            id="btnCalificarCuestionario"
+        >
+            Calificar cuestionario
+        </button>
+
+        <div id="resultadoCuestionario"></div>
+    </div>
+
+</section>
+
+        
+        
+<!-- ================================== -->
+<!-- RESÚMENES DE ESTUDIO CON IA -->
+<!-- ================================== -->
+
+<section class="seccion-resumen">
+
+    <div class="encabezado-resumen">
+        <h2>Resúmenes de estudio</h2>
+
+        <button type="button" id="btnGenerarResumen">
+            Generar resumen con IA
+        </button>
+    </div>
+
+    <p id="estadoResumen"></p>
+
+    <div id="contenedorResumen" style="display: none;">
+
+        <div id="textoResumen"></div>
+
+        <button type="button" id="btnCopiarResumen">
+            Copiar resumen
+        </button>
+
+    </div>
+
+</section>
+
+
+        <!-- Área de mensajes -->
+        <div class="mensajes" id="mensajes">
+
+            <div class="mensaje asistente">
+
+                <div class="burbuja">
+                    Hola 👋 Soy MoodleIA. Puedes preguntarme sobre el contenido
+                    disponible en este curso.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Área para escribir -->
+        <div class="entrada-chat">
+
+            <textarea
+                id="pregunta"
+                placeholder="Escribe tu pregunta..."
+                rows="1"
+            ></textarea>
+
+            <button id="btnEnviar">
+                Enviar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/chat.js"></script>
+
+</body>
+
+</html>

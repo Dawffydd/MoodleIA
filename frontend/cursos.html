@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MoodleIA - Mis cursos</title>
+
+    <link rel="stylesheet" href="css/cursos.css">
+</head>
+
+<body>
+
+    <div class="pagina-cursos">
+
+        <header class="encabezado">
+
+            <div>
+                <h1>MoodleIA</h1>
+                <p>Asistente académico</p>
+            </div>
+
+            <button id="btnCerrarSesion">
+                Cerrar sesión
+            </button>
+
+        </header>
+
+        <main class="contenido">
+
+            <div class="bienvenida">
+                <h2 id="saludoUsuario">Mis cursos</h2>
+
+                <p>
+                    Selecciona el curso sobre el que deseas
+                    consultar al asistente académico.
+                </p>
+            </div>
+
+            <div id="mensajeEstado">
+                Cargando tus cursos...
+            </div>
+
+            <section
+                id="listaCursos"
+                class="lista-cursos">
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/cursos.js"></script>
+
+</body>
+
+</html>

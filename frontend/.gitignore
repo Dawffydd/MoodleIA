@@ -1,0 +1,39 @@
+
+# Dependencias de Node.js
+node_modules/
+**/node_modules/
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Archivos de registro
+*.log
+logs/
+npm-debug.log*
+
+# Archivos temporales
+tmp/
+temp/
+.cache/
+
+# Archivos del editor y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Copias de seguridad y bases de datos locales
+*.bak
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# Archivos que puedan contener credenciales
+*.pem
+*.key
